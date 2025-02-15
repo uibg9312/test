@@ -1,0 +1,86 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">MusicStore</a>
+            <div class="nav-links">
+                <a href="/albums.html">Albums</a>
+                <a href="/equipment.html">Equipment</a>
+            </div>
+            <button class="cart-btn" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Your Premier Music Destination</h1>
+            <p>Discover the latest albums and professional equipment for musicians and music lovers alike.</p>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="product-grid" id="featured-products">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Artists -->
+    <section class="featured-artists">
+        <div class="container">
+            <h2>Featured Artists</h2>
+            <div class="artist-grid">
+                <div class="artist-card">
+                    <img src="https://images.unsplash.com/photo-1597839855680-aa475aff5f45" alt="Electronic Vibes">
+                    <h3>Electronic Vibes</h3>
+                </div>
+                <div class="artist-card">
+                    <img src="https://images.unsplash.com/photo-1529888774584-971ef0544893" alt="The Acoustics">
+                    <h3>The Acoustics</h3>
+                </div>
+                <div class="artist-card">
+                    <img src="https://images.unsplash.com/photo-1626021855512-da7f79ed0b18" alt="Rock Legends">
+                    <h3>Rock Legends</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button onclick="toggleCart()" class="close-btn">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
